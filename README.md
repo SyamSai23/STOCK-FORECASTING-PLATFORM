@@ -25,13 +25,6 @@ To get started with this project, follow these steps:
 
 To use this system for financial forecasting, refer to the detailed usage instructions in the project documentation. You can configure the system according to your specific needs and input data sources.
 
-## Contributing
-
-Wintellisys and Paper2Life
-
-## License
-
-This project is licensed under the ...
 
 ## Please Note
 
