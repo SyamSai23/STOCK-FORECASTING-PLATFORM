@@ -1,0 +1,25 @@
+# Environment variables (CRITICAL)
+.env
+.env.*
+**/.env
+
+# Python
+__pycache__/
+*.pyc
+venv/
+.venv/
+env/
+
+# Node / React
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS / Editor
+.DS_Store
+.vscode/
+.idea/
+
+# Logs
+*.log

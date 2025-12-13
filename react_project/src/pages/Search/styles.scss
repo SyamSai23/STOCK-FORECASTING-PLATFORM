@@ -1,0 +1,170 @@
+@import './../../styles/breakpoint.scss';
+
+.searchWrapper {
+  padding: 24px;
+  @include media-sm {
+    padding-top: 0;
+  }
+  flex: 1;
+  @include media-rsm {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cardInfoWrapper {
+    & > div:nth-child(1) {
+      width: 50%;
+    }
+    & > div:nth-child(2) {
+      width: 50%;
+      height: 100%;
+      box-sizing: border-box;
+    }
+  }
+
+  .chartWrapper {
+    flex: 1;
+    & > div:nth-child(1) {
+      width: 30%;
+    }
+    & > div:nth-child(2) {
+      width: 70%;
+    }
+    .chart {
+      position: relative;
+      .tag {
+        width: auto;
+        font-size: 14px;
+        height: 20px;
+        margin-left: 15px;
+        position: relative;
+        user-select: none;
+        color: white;
+        padding-right: 5px;
+        line-height: 1.5;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        &::before {
+          content: '';
+          position: absolute;
+          border-bottom: 10px solid transparent;
+          border-top: 10px solid transparent;
+          height: 0px;
+          width: 0px;
+          margin-left: -10px;
+        }
+        &.up {
+          background: #82de5a;
+          &::before {
+            border-right: 10px solid #82de5a;
+          }
+        }
+        &.down {
+          background: #be1213;
+          &::before {
+            border-right: 10px solid #be1213;
+          }
+        }
+        &.hold {
+          background: #5a6369;
+          &::before {
+            border-right: 10px solid #5a6369;
+          }
+        }
+      }
+    }
+  }
+
+  .cardInfoWrapper,
+  .chartWrapper {
+    display: flex;
+    gap: 60px;
+    margin-top: 24px;
+    .card {
+      height: inherit;
+      .cardInfo {
+        justify-content: space-between;
+        gap: 24px;
+        @include media-rsm {
+          display: flex;
+        }
+        p {
+          margin: 0;
+          margin-bottom: 8px;
+          font-size: 14px;
+        }
+        .fieldValue {
+          color: #3487a7;
+        }
+      }
+    }
+  }
+
+  .tickerInfoWrapper {
+    .tickerInfo {
+      & > p:first-child {
+        font-weight: bold;
+        font-size: 18px;
+        color: #adadad;
+      }
+      & > p:nth-child(2) {
+        color: #adadad;
+      }
+    }
+  }
+
+  .addToPortfolio {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    background: #3f3f3f;
+    color: white;
+    border-radius: 30px;
+    padding: 8px 16px;
+    cursor: pointer;
+    border: 1px solid black;
+    &.disabled {
+      opacity: 0.3;
+      cursor: not-allowed;
+    }
+  }
+
+  @include media-sm {
+    .cardInfoWrapper,
+    .chartWrapper {
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .cardInfoWrapper {
+      & > div:nth-child(1) {
+        width: unset;
+      }
+      & > div:nth-child(2) {
+        width: unset;
+      }
+    }
+
+    .chartWrapper {
+      margin-top: 0;
+      & > div:nth-child(1) {
+        width: unset;
+      }
+      & > div:nth-child(2) {
+        width: unset;
+      }
+    }
+  }
+
+  @include media-rsm {
+    .cardInfoWrapper {
+      max-height: 22vh;
+      height: fit-content;
+      .about {
+        height: 100%;
+        overflow: scroll;
+      }
+    }
+  }
+}

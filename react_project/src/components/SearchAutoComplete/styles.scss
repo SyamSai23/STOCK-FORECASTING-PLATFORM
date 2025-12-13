@@ -1,0 +1,25 @@
+.autoCompleteWrapper {
+  .MuiInputBase-root {
+    padding: 2px 2px 2px 16px !important;
+    border-radius: 50%;
+    border-color: black;
+    color: white;
+    border-radius: 50px;
+    background: #3f3f3f;
+    input {
+      padding: 0 !important;
+    }
+  }
+  fieldset {
+    border: none;
+  }
+}
+
+.searchRoundedIcon {
+  background: #266F8C;
+  border-radius: 50%;
+  padding: 4px;
+  color: white;
+  cursor: pointer;
+  z-index: 1;
+}

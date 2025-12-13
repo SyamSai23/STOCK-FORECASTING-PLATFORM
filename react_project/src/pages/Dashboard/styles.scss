@@ -1,0 +1,71 @@
+@import './../../styles/breakpoint.scss';
+
+.dflex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  span {
+    display: flex;
+    align-items: center;
+    &.bold {
+      font-weight: 800;
+    }
+  }
+}
+
+.tickerAnalysis {
+  padding-left: 16px;
+  & > div:first-child {
+    font-weight: bold;
+  }
+
+  & > div:not(:first-child) {
+    margin-top: 8px;
+  }
+}
+
+.dashboardContainer {
+  display: flex;
+  text-align: justify;
+  gap: 24px;
+  width: 100%;
+  padding: 24px;
+  box-sizing: border-box;
+  overflow: scroll;
+  .dashboardCard {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  @include media-sm {
+    flex-direction: column;
+  }
+}
+
+@include media-rsm {
+  .dashboardCard {
+    width: 50%;
+    overflow: scroll;
+  }
+
+  .analysisWrapper {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.myPortfolio {
+  margin-bottom: 24px;
+  overflow: scroll;
+
+  & > div:first-child {
+    margin-bottom: 12px;
+    font-weight: bold;
+  }
+}
+
+.textDecoration {
+  text-decoration: underline;
+}

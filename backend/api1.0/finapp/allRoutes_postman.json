@@ -1,0 +1,687 @@
+{
+	"info": {
+		"_postman_id": "d46b120a-902b-4fcf-88fc-81ad516e3216",
+		"name": "api calls",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31846530",
+		"_collection_link": "https://crimson-shadow-508619.postman.co/workspace/My-Workspace~c384bdff-df8b-445d-85ed-1f50e353afc8/collection/32346890-d46b120a-902b-4fcf-88fc-81ad516e3216?action=share&source=collection_link&creator=31846530"
+	},
+	"item": [
+		{
+			"name": "New Folder",
+			"item": [
+				{
+					"name": "/persist",
+					"item": [
+						{
+							"name": "http://10.0.0.76:9768/persist",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"action\": \"delete\",\n    \"query1\": {\"username\": \"john\"},\n    \"query2\": {\"ticker\": \"TSLA\"}\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://10.0.0.76:9768/persist",
+									"protocol": "http",
+									"host": [
+										"10",
+										"0",
+										"0",
+										"76"
+									],
+									"port": "9768",
+									"path": [
+										"persist"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://10.0.0.76:9768/persist",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"action\": \"update\",\n    \"query1\": {\"username\": \"john\"},\n    \"query2\": {\"ticker\": \"BA\"},\n    \"update_values\": {\n        \"date_added\": \"01/15/2024\"\n    }\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://10.0.0.76:9768/persist",
+									"protocol": "http",
+									"host": [
+										"10",
+										"0",
+										"0",
+										"76"
+									],
+									"port": "9768",
+									"path": [
+										"persist"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://10.0.0.76:9768/persist",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"action\": \"upsert\",\n    \"query1\": {\"username\": \"john\"},\n    \"query2\": {\"ticker\": \"BA\"},\n    \"update_values\": {\n        \"date_added\": \"01/13/2024\"\n    }\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://10.0.0.76:9768/persist",
+									"protocol": "http",
+									"host": [
+										"10",
+										"0",
+										"0",
+										"76"
+									],
+									"port": "9768",
+									"path": [
+										"persist"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://10.0.0.76:9768/persist",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"action\": \"find\",\n    \"query1\": {\"username\": \"john\"},\n    \"query2\": {\"ticker\": \"AAPL\"}\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://10.0.0.76:9768/persist",
+									"protocol": "http",
+									"host": [
+										"10",
+										"0",
+										"0",
+										"76"
+									],
+									"port": "9768",
+									"path": [
+										"persist"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://10.0.0.76:9768/persist",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"action\": \"insert\",\n    \"document\":{\n        \"ticker\": \"BA\",\n        \"date_added\": \"01/17/2024\",\n        \"username\": \"alice\"\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://10.0.0.76:9768/persist",
+									"protocol": "http",
+									"host": [
+										"10",
+										"0",
+										"0",
+										"76"
+									],
+									"port": "9768",
+									"path": [
+										"persist"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "/portfolio",
+					"item": [
+						{
+							"name": "http://127.0.0.1:9781/portfolio",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"action\": \"get_tickers\",\n    \"username\": \"john\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:9781/portfolio",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "9781",
+									"path": [
+										"portfolio"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:9781/portfolio",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"action\": \"get_documents\",\n    \"username\": \"john\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:9781/portfolio",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "9781",
+									"path": [
+										"portfolio"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "/history_persist",
+					"item": [
+						{
+							"name": "http://10.0.0.76:9800/history_persist",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"action\": \"find_by_one_query\",\n    \"query\": {\"ticker\": \"AAPL\"}\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://10.0.0.76:9800/history_persist",
+									"protocol": "http",
+									"host": [
+										"10",
+										"0",
+										"0",
+										"76"
+									],
+									"port": "9800",
+									"path": [
+										"history_persist"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://10.0.0.76:9800/history_persist",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"action\": \"find_by_two_queries\",\n    \"query1\": {\"ticker\": \"AAPL\"},\n    \"query2\": {\"date\": \"2023-12-14\"}\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://10.0.0.76:9800/history_persist",
+									"protocol": "http",
+									"host": [
+										"10",
+										"0",
+										"0",
+										"76"
+									],
+									"port": "9800",
+									"path": [
+										"history_persist"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://10.0.0.76:9800/history_persist",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"action\": \"find_by_three_queries\",\n    \"query1\": {\"ticker\": \"AAPL\"},\n    \"query2\": {\"date\": \"2023-12-14\"},\n    \"query3\": {\"time\": \"9:00\"}\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://10.0.0.76:9800/history_persist",
+									"protocol": "http",
+									"host": [
+										"10",
+										"0",
+										"0",
+										"76"
+									],
+									"port": "9800",
+									"path": [
+										"history_persist"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "http://127.0.0.1:9767/search",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"ticker\": \"AAPL\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:9767/search",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9767",
+							"path": [
+								"search"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "allRoutes",
+			"item": [
+				{
+					"name": "http://127.0.0.1:9600/search",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"ticker\": \"AAPL\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:9600/search",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9600",
+							"path": [
+								"search"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:9600/persist",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"action\": \"insert\",\n    \"document\": {\n        \"ticker\": \"AAPL\",\n        \"username\": \"mia\",\n        \"date_added\": \"01-27-2024\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:9600/persist",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9600",
+							"path": [
+								"persist"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:9600/persist",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"action\": \"update\",\n    \"query1\": {\"username\": \"mia\"},\n    \"query2\": {\"ticker\": \"AAPL\"},\n    \"update_values\": {\n        \"date_added\": \"01/20/2024\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:9600/persist",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9600",
+							"path": [
+								"persist"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:9600/persist",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"action\": \"upsert\",\n    \"query1\": {\"username\": \"mia\"},\n    \"query2\": {\"ticker\": \"MSFT\"},\n    \"update_values\": {\n        \"date_added\": \"01/22/2024\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:9600/persist",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9600",
+							"path": [
+								"persist"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:9600/persist",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"action\": \"find\",\n    \"query1\": {\"username\": \"mia\"},\n    \"query2\": {\"ticker\": \"MSFT\"}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:9600/persist",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9600",
+							"path": [
+								"persist"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:9600/persist",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"action\": \"delete\",\n    \"query1\": {\"username\": \"mia\"},\n    \"query2\": {\"ticker\": \"MSFT\"}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:9600/persist",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9600",
+							"path": [
+								"persist"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:9600/history_persist",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"action\": \"find_by_three_queries\",\n    \"query1\": {\"ticker\": \"AAPL\"},\n    \"query2\": {\"date\": \"2023-12-14\"},\n    \"query3\": {\"time\": \"9:00\"}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:9600/history_persist",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9600",
+							"path": [
+								"history_persist"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:9600/portfolio",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"action\": \"get_documents\",\n    \"username\": \"john\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:9600/portfolio",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9600",
+							"path": [
+								"portfolio"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:9600/portfolio",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"action\": \"get_tickers\",\n    \"username\": \"john\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:9600/portfolio",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9600",
+							"path": [
+								"portfolio"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": null,
+			"type": "string"
+		},
+		{
+			"value": "https://reqres.in/api",
+			"type": "string"
+		}
+	]
+}

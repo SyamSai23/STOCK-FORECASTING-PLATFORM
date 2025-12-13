@@ -1,0 +1,13 @@
+<svg fill="#000000" viewBox="0 0 24 24" id="up-trend" data-name="Flat Line" xmlns="http://www.w3.org/2000/svg"
+    class="icon flat-line">
+    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+    <g id="SVGRepo_iconCarrier">
+        <polyline id="primary" points="21 6 14 13 11 10 3 18"
+            style="fill: none; stroke: #82de5a; stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;">
+        </polyline>
+        <polyline id="primary-2" data-name="primary" points="21 10 21 6 17 6"
+            style="fill: none; stroke: #82de5a; stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;">
+        </polyline>
+    </g>
+</svg>

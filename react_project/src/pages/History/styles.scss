@@ -1,0 +1,190 @@
+@import './../../styles/breakpoint.scss';
+.topWrapper {
+  display: flex;
+  @include media-sm {
+    flex-direction: column;
+  }
+  .contentHistoryCard {
+    width: 30vw;
+    margin: 24px;
+    @include media-sm {
+      box-sizing: border-box;
+      width: auto;
+    }
+    .contentHistory {
+      padding: 16px 0;
+      & > div:first-child {
+        margin-bottom: 16px;
+      }
+      .analysisParams {
+        & > div {
+          display: flex;
+          justify-content: space-between;
+          p {
+            margin: 8px 0 0;
+          }
+        }
+        .slashColor {
+          color: white;
+        }
+      }
+    }
+  }
+  .dateRangeWrapper {
+    flex: 1;
+    color: #ffff;
+    align-self: center;
+    text-align: center;
+    @include media-sm {
+      margin-bottom: 24px;
+    }
+  }
+}
+.dateRangeWrapper h3 {
+  font-weight: normal; 
+}
+.table {
+  thead {
+    display: flex;
+    padding: 0 20px;
+    position: sticky;
+    top: 0;
+    background: #1f1f1f;
+    z-index: 1;
+    th {
+      @include media-rsm {
+        flex: 1;
+      }
+      font-weight: normal;
+      background-color: unset;
+      width: 150px;
+      box-sizing: border-box;
+      text-align: center;
+      color: white;
+      text-wrap: nowrap;
+      &:first-child {
+        text-align: left;
+        width: 150px;
+        @include media-sm {
+          width: 80px;
+        }
+      }
+    }
+    @include media-sm {
+      padding-left: 28px;
+      padding-right: 0;
+    }
+  }
+  tbody {
+    z-index: 0;
+    position: relative;
+    tr:nth-child(even) {
+      background-color: #1f1f1f;
+      color: white;
+    }
+    tr:nth-child(odd) {
+      background-color: #313131;
+      color: white;
+      &:first-child {
+        width:100%;
+      }
+    }
+    tr {
+      .MuiAccordion-root {
+        width: 100%;
+        background-color: inherit;
+        .MuiButtonBase-root {
+          background: inherit;
+          padding: 0;
+          min-height: unset;
+          padding: 0 20px;
+          @include media-sm {
+            padding-left: 28px;
+            padding-right: 0;
+          }
+        }
+        .MuiAccordionSummary-content {
+          flex: 5;
+          margin: 0;
+        }
+        .MuiAccordionDetails-root {
+          padding: 0;
+        }
+        .MuiAccordionSummary-expandIconWrapper {
+          flex: 1;
+          transform: none;
+          transition: none;
+          color: white;
+          justify-content: center;
+          @include media-sm {
+            left: 0;
+            position: absolute;
+          }
+          svg {
+            padding: 8px;
+            transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+            transform: rotate(0deg);
+            @include media-sm {
+              padding: 8px 4px;
+            }
+          }
+          &.Mui-expanded {
+            transform: none;
+            svg {
+              transform: rotate(180deg);
+            }
+          }
+        }
+      }
+      display: flex;
+      td {
+        align-self: center;
+        flex: 1;
+        text-wrap: nowrap;
+        text-align: center;
+        width: 70px;
+        box-sizing: border-box;
+        &:first-child {
+          text-align: left;
+          color: white;
+          width: 150px;
+          min-width: 150px;
+          @include media-sm {
+            width: 80px;
+            min-width: 80px;
+          }
+        }
+        @include media-sm {
+          max-width: 70px;
+        }
+      }
+      td:not(.correctUp):not(.correctDown) {
+        color: white;
+      }
+      .accordionData {
+        padding: 0 20px;
+        @include media-sm {
+          padding-left: 28px;
+          padding-right: 0;
+        }
+      }
+    }
+  }
+}
+.correctUp {
+  color: #82de5a;
+  text-transform: capitalize;
+  @include media-sm {
+    padding: 0;
+  }
+}
+.correctDown {
+  color: #ff595a;
+  text-transform: capitalize;
+  @include media-sm {
+    padding: 0;
+  }
+}
+.letterSpacing3 {
+  letter-spacing: 3px;
+}

@@ -1,0 +1,55 @@
+@import './../../styles/breakpoint.scss';
+
+@mixin flex-properties {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  gap: 26px;
+  background: #1f1f1f;
+  position: sticky;
+  top: 0;
+  @include flex-properties;
+  justify-content: space-between;
+  padding: 20px 48px;
+
+  @include media-sm {
+    padding: 20px;
+  }
+
+  .title {
+    flex: 1;
+    font-size: 24px;
+    color: #F6FDFD;
+  }
+
+  .AccountInfoWrapper {
+    @include flex-properties;
+    gap: 8px;
+    color: #F6FDFD;
+    @include media-rsm {
+      flex: 1;
+      place-content: end;
+    }
+    .accountUserName {
+      @include media-sm {
+        padding: 8px;
+      }
+      p {
+        margin: 0;
+      }
+      & > p:first-child {
+        margin-bottom: 8px;
+      }
+      & > p:nth-child(2) {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .searchBarWrapper {
+    flex: 1;
+  }
+}

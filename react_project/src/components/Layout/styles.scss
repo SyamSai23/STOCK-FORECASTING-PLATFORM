@@ -1,0 +1,18 @@
+.layoutWrapper {
+  display: flex;
+  background-color: #1f1f1f;
+  .contentWrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: scroll;
+    width: 100%;
+  }
+}
+
+.disclaimerText {
+  font-size: 12px;
+  color: white;
+  margin-top: 16px;
+  text-align: center;
+}

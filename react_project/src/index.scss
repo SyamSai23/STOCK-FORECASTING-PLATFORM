@@ -1,0 +1,342 @@
+@import './styles/breakpoint.scss';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  // font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
+  //   'Droid Sans', 'Helvetica Neue', sans-serif;
+  // font-family: Copperplate, Copperplate Gothic Light, fantasy;
+  // font-family: Dejavu Sans, Arial, Verdana, sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+Table {
+  width: 100%;
+  border-collapse: collapse;
+  box-sizing: border-box;
+}
+
+th,
+td {
+  border: 0px solid #ddd;
+  padding: 8px;
+  text-align: left; /* Ensure text alignment */
+}
+
+th {
+  color: #333; /* Dark text for better contrast */
+}
+
+tr:nth-child(even) {
+  background-color: #313131;
+} /* Zebra striping for rows */
+
+.error-message {
+  color: red;
+  margin: 10px 0;
+}
+
+.navbar {
+  background-color: black;
+  color: white;
+  width: 200px;
+  height: 100vh;
+  position: fixed;
+  padding-top: 15px;
+  padding-right: 10px;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center align items horizontally */
+  font-weight: bold; /* Bolder font */
+  letter-spacing: 0.5px; /* Slight letter spacing */
+}
+.navbar logo {
+  list-style-type: none;
+  font-size: 24px; /* Larger font size */
+  text-align: right;
+  margin-right: 5px;
+  margin-top: 5px;
+  word-wrap: break-word;
+  width: 100%; /* Full width of navbar */
+}
+.navbar ul {
+  list-style-type: none;
+  text-align: left;
+  font-size: 18px; /* Larger font size */
+  margin-top: 50px;
+  margin-left: 50px;
+  width: 100%; /* Full width of navbar */
+}
+.navbar-link {
+  display: flex;
+  align-items: center;
+}
+.navbar li {
+  width: 80%; /* Full width */
+  margin-bottom: 20px;
+}
+
+.navbar a {
+  color: #827d7a; /* Darker shade of white for normal state */
+  text-decoration: none;
+  display: block;
+  padding: 15px 0;
+  border-radius: 4px;
+  background-color: black; /* Keep background black */
+}
+.navbar-links-text {
+  margin-left: 5px;
+}
+.navbar-links-text:hover svg {
+  fill: white;
+}
+
+.navbar a:hover {
+  color: white; /* Pure white on hover */
+}
+
+.navbar a.active {
+  color: white; /* Pure white for the active page */
+  background-color: black; /* Keep background black */
+}
+
+/* Additional styles for your component (optional) */
+.Ticker_Search h2 {
+  margin-top: 10px; /* Adjust as needed */
+  margin-left: 25px;
+}
+
+.Ticker_Search form {
+  margin-bottom: 20px; /* Space between forms */
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+.Ticker_Search label,
+.Ticker_Search input,
+.Ticker_Search button {
+  display: block; /* Make these elements block level */
+  margin-bottom: 10px;
+  /* Spacing between form elements */
+}
+
+.Ticker_Search input[type='text'] {
+  width: 100%; /* Full width */
+  padding: 10px; /* Comfortable padding */
+  margin: 20px 0; /* Space between elements */
+  display: inline-block;
+  border: 1px solid #ccc; /* Subtle border */
+  border-radius: 4px; /* Rounded corners */
+  box-sizing: border-box; /* Include padding in width */
+}
+
+.Ticker_Search input[type='text']:focus {
+  border-color: #4caf50; /* Highlight color on focus */
+  outline: none; /* Removes the default outline */
+}
+
+.Ticker_Search button {
+  width: 100%; /* Full width */
+  background-color: #007bff; /* Electric blue background */
+  color: white; /* White text */
+  padding: 14px 20px; /* Comfortable padding */
+  margin: 8px 0; /* Space between elements */
+  border: none;
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Hand cursor on hover */
+  box-sizing: border-box;
+}
+
+.Ticker_Search button:hover {
+  background-color: #0066cc; /* Slightly darker shade for hover */
+}
+
+.Ticker_Search label {
+  margin-bottom: 8px; /* Space between label and input */
+  display: block; /* Block level for full width */
+  font-size: 16px; /* Larger font size for readability */
+}
+
+.Add_To_Portfolio button {
+  width: 100%; /* Full width */
+  background-color: #ff4800; /* Electric blue background */
+  color: white; /* White text */
+  padding: 14px 20px; /* Comfortable padding */
+  margin: 8px 0; /* Space between elements */
+  border: none;
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Hand cursor on hover */
+  box-sizing: border-box;
+}
+
+.Add_To_Portfolio button:hover {
+  background-color: #cc0000; /* Slightly darker shade for hover */
+}
+
+.main-container {
+  display: flex;
+}
+
+.content-container {
+  flex-grow: 1;
+  margin-left: 200px;
+  padding: 20px;
+  overflow: auto; /* Add overflow for scroll on smaller screens */
+}
+
+/* StockInfo.css */
+.stock-info-container {
+  display: flex;
+  justify-content: space-between;
+  background: #f1f1f1;
+  padding: 10px;
+  border-radius: 1px;
+  font-size: 0.9rem;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.stock-info-item {
+  margin: 5px;
+}
+
+.stock-info-label {
+  font-weight: bold;
+}
+.row:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+.column {
+  float: left;
+  width: 45%;
+  margin-right: 5%;
+}
+.gray-card-container {
+  width: 30%;
+  margin-top: 30px;
+  margin-right: 5px;
+  justify-content: space-between;
+  margin-left: 25px; /* Remove the auto margin */
+  background-color: #3b3b3b;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.gray-card-container-enlarged {
+  width: 90%;
+  margin-top: 30px;
+  margin-right: 5px;
+  justify-content: space-between;
+  margin-left: 25px; /* Remove the auto margin */
+  background-color: #3b3b3b;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.gray-card {
+  background-color: #3b3b3b;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.table-no-lines {
+  border-collapse: collapse;
+}
+.table-no-lines th,
+.table-no-lines td {
+  border: none;
+  padding: 8px;
+}
+.table-no-lines th {
+  background-color: #ddd;
+  background-color: transparent;
+}
+.portfolio-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #3b3b3b;
+  border-radius: 8px 8px 0 0;
+}
+.portfolio-header h2 {
+  margin: 0;
+}
+.arrow-link {
+  text-decoration: none;
+}
+.arrow {
+  height: 17px;
+  width: auto;
+  margin-top: 6px;
+  margin-right: 130px;
+}
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin-left: 25px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+}
+
+.user-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.username {
+  margin: 1px 0; /* Adjust the negative margin to move the username up */
+}
+
+.user-icon {
+  width: 60px; /* Adjust the size as needed */
+  height: 60px;
+  margin-left: 8px; /* Add some spacing between username and icon */
+}
+
+.account-link {
+  margin: -1px 0; /* Adjust the negative margin to decrease the gap */
+  font-size: 14px; /* Adjust the font size as needed */
+  color: #0066cc; /* Link color */
+  text-decoration: none;
+}
+
+.account-link:hover {
+  cursor: pointer;
+  color: #004080; /* Change color on hover */
+}
+
+.ant-picker-dropdown {
+  tr {
+    background-color: white;
+    td {
+      text-align: center;
+    }
+  }
+}
+
+@include media-sm {
+  .ant-picker-dropdown {
+    top: 0 !important;
+  }
+  .ant-picker-panels {
+    flex-direction: column;
+  }
+}

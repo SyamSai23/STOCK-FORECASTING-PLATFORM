@@ -1,0 +1,24 @@
+setuptools
+numpy
+pycaret[full]
+Flask
+pymongo
+yfinance
+pandas
+openai==0.28
+python-dotenv
+pytest
+Flask-Testing
+pandas
+matplotlib
+datetime
+packaging
+requests
+datetime
+schedule
+alpaca-py
+Flask-Cors
+joblib==1.3.2
+## if you run into problems, delete this below
+dask[dataframe]
+jsonify

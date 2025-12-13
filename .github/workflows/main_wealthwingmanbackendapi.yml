@@ -1,0 +1,69 @@
+name: Build and deploy Python app to Azure Web App - WealthWingManBackEndApi
+ 
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+env:
+  CI: 'false'
+ 
+jobs:
+  build:
+    runs-on: ubuntu-latest
+ 
+    steps:
+      - uses: actions/checkout@v2
+ 
+      - name: Set up Python version
+        uses: actions/setup-python@v1
+        with:
+          python-version: '3.8'
+ 
+      - name: Create and start virtual environment & Install dependencies
+        run: |
+          cd backend/api1.0/finapp
+          python -m venv venv
+          source venv/bin/activate
+          python -m pip install --upgrade pip setuptools wheel
+          pip install --no-deps --no-cache-dir --target="venv/lib/python3.8/site-packages/" -r requirements.txt
+          ls -la
+      - name: Zip contents 
+        run: |
+          cd backend/api1.0/finapp
+          ls -la
+          pwd
+          zip pythonbackend1-release1.zip ./* -x react_project\* processes\* backtest_data\* -r
+          ls -la
+          pwd
+      - name: Upload artifact for deployment jobs
+        uses: actions/upload-artifact@v4
+        with:
+          name: python-app
+          path: /home/runner/work/WingmanPro/WingmanPro/backend/api1.0/finapp/pythonbackend1-release1.zip
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    environment:
+      name: 'Production'
+      url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
+    steps:
+      - name: Download artifact from build job
+        uses: actions/download-artifact@v4
+        with:
+          name: python-app
+      - name: Unzip artifact for deployment
+        run: unzip pythonbackend1-release1.zip
+      - name: 'Deploy to Azure Web App'
+        id: deploy-to-webapp
+        uses: azure/webapps-deploy@v2
+        with:
+          app-name: WealthWingManBackEndApi
+          slot-name: Production
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_D92E833DE81148BBA2A3A4256E8582BB }}
+          package: pythonbackend1-release1.zip
+          # Specify VNet integration settings
+          vnet-name: WealthWingmanVnetUSeast2
+          vnet-resource-group: rg-Wintel-spoke-networking
+          subnet-name: WealthWingmanVnetUSeast2_Public

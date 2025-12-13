@@ -1,0 +1,75 @@
+$xs: 360px;
+$sm: 480px;
+$sl: 481px;
+$md: 768px;
+$l: 920px;
+$lg: 1200px;
+$xl: 1440px;
+$xxl: 1920px;
+
+// exporting sizes to be used via js
+:export {
+  xs: $xs;
+  sm: $sm;
+  md: $md;
+  l: $l;
+  lg: $lg;
+  xl: $xl;
+  xxl: $xxl;
+}
+
+// generic media query mixin. do not use directly
+@mixin media($breakpoint) {
+  @media only screen and (max-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin reverse($breakpoint) {
+  @media only screen and (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+// media queries for each size to be used directly
+@mixin media-xs {
+  @include media($xs) {
+    @content;
+  }
+}
+@mixin media-sm {
+  @include media($sm) {
+    @content;
+  }
+}
+@mixin media-md {
+  @include media($md) {
+    @content;
+  }
+}
+@mixin media-l {
+  @include media($l) {
+    @content;
+  }
+}
+@mixin media-xl {
+  @include media($xl) {
+    @content;
+  }
+}
+@mixin media-xxl {
+  @include media($xxl) {
+    @content;
+  }
+}
+
+@mixin media-rsm {
+  @include reverse($sl) {
+    @content;
+  }
+}
+
+.cursor-pointer {
+  cursor: pointer;
+  user-select: none;
+}

@@ -1,0 +1,119 @@
+@import './../../styles/breakpoint.scss';
+
+.sidebar {
+  user-select: none;
+  transition: 0.5s cubic-bezier(0.36, -0.01, 0, 0.77);
+  background: #1f1f1f;
+  padding: 8px;
+  height: 100vh;
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  color: #F2DBAE;
+  overflow: hidden;
+  flex: 0 0 auto;
+  border-right: 1px solid #626262;
+
+  @include media-sm {
+    position: absolute;
+    left: 0;
+    z-index: 9999;
+    overflow: hidden;
+    box-sizing: content-box;
+    background: #1f1f1f;
+    color: #F2DBAE;
+    box-shadow: 12px 20px 20px 0px grey;
+  }
+
+  .hamburgerIcon {
+    margin: 20px 20px 20px auto;
+    color: white;
+  }
+
+  .someMetric {
+    color: white;
+    text-align: center;
+    margin: 16px auto 0;
+    box-shadow: inset -17px -7px 20px 0px #192839;
+    background: #266F8C;
+    border-radius: 20px;
+    padding: 8px 4px;
+    width: fit-content;
+    white-space: nowrap;
+
+    & > div:first-child {
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    & > div:nth-child(2) {
+      font-size: 12px;
+    }
+  }
+
+  .productWrapper {
+    transition: 0.5s cubic-bezier(0.36, -0.01, 0, 0.77);
+    font-weight: bold;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    align-items: center;
+    align-self: flex-start;
+  }
+
+  .itemWrapper {
+    margin-top: 100px;
+    margin-left: 20px;
+    @include media-sm {
+      margin-left: 0;
+    }
+  }
+
+  .item {
+    width: inherit;
+    overflow: hidden;
+    padding: 8px 12px;
+    cursor: pointer;
+    align-self: flex-start;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-bottom: 10px;
+    color: #9f9f9f;
+    &.active {
+      border-radius: 20px;
+      border: 1px solid #266F8C;
+      color: white;
+      box-shadow: 0 0 10px 5px rgba(38, 111, 140, 0.5);
+    }
+  }
+
+  .itemName {
+    font-weight: bold;
+    font-size: 14px;
+    white-space: nowrap;
+  }
+
+  .collapsableChevron {
+    @include media-sm {
+      display: none;
+    }
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    cursor: pointer;
+    border-right: 2px solid #3f4041;
+    border-top: 2px solid #3f4041;
+    border-bottom: 2px solid #3f4041;
+    border-radius: 0 20px 20px 0;
+    padding: 40px 0;
+  }
+
+  .visibilityHidden {
+    visibility: hidden;
+  }
+}
+
