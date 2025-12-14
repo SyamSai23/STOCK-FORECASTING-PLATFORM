@@ -8,9 +8,9 @@ In the world of finance, making informed decisions quickly can mean the differen
 
 ## Features
 
-- **News-Based Predictions**: We harness the power of GPT-3.5 to analyze news articles and extract insights that inform market predictions.
+- **News-Based Predictions**: Harness the power of GPT-3.5 to analyze news articles and extract insights that inform market predictions.
 
-- **Quantitative Data Analysis**: Our private machine learning algorithm processes and analyzes quantitative data to complement news-based predictions, providing a more comprehensive forecasting model.
+- **Quantitative Data Analysis**: Private machine learning algorithm processes and analyzes quantitative data to complement news-based predictions, providing a more comprehensive forecasting model.
 
 ## Getting Started
 
